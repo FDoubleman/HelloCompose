@@ -4,11 +4,6 @@ import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.annotation.DrawableRes
-import androidx.annotation.Size
-import androidx.annotation.StringRes
-import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -76,7 +71,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
-import com.google.android.material.search.SearchBar
 import androidx.compose.material3.NavigationBarItem
 
 
@@ -327,7 +321,7 @@ class MainActivity : ComponentActivity() {
          */
         // 2、如需向可组合项添加内部状态，可以使用 mutableStateOf 函数，该函数可让 Compose 重组读取该 State 的函数。
         // 不能只是将 mutableStateOf 分配给可组合项中的某个变量。
-        val expanded = mutableStateOf(false)
+        val expanded = remember { mutableStateOf(false) }
 
         // 3、重组后保留状态，请使用 remember 记住可变状态。
         // remember 可以起到保护作用，防止状态在重组时被重置。
