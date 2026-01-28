@@ -8,6 +8,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import cn.xdf.myapplication.ui.widget.MyApplicationTheme
+import cn.xdf.myapplication.widget.StatefulCounter
 import cn.xdf.myapplication.widget.WaterCounter
 
 class BasicStateActivity : ComponentActivity() {
@@ -20,7 +21,7 @@ class BasicStateActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    WaterCounter()
+                    StatefulCounter()
                 }
             }
         }
