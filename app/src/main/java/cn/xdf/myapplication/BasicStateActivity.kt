@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import cn.xdf.myapplication.ui.widget.MyApplicationTheme
 import cn.xdf.myapplication.widget.StatefulCounter
 import cn.xdf.myapplication.widget.WaterCounter
+import cn.xdf.myapplication.widget.WellnessTasksList
 
 class BasicStateActivity : ComponentActivity() {
 
@@ -22,6 +23,7 @@ class BasicStateActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     StatefulCounter()
+                    WellnessTasksList()
                 }
             }
         }
